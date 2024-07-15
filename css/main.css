@@ -1,9 +1,14 @@
+html{
+    width: 1912px;
+    height: 100%;
+}
 body {
     width: 1912px;
     height: 100%;
     margin: 0;
-    background-image:url("C:/Users/Luizz/Desktop/Programação/UaiLab/img/DYEFF.jpg");
+    background-image:url("");
     background-size: cover;
+    background-color: #000;
 }
 
 .uailab_intro {
@@ -103,16 +108,7 @@ h1{
     width: 700px;
     height: 125px;
 }
-p{
-    font-family: myText;
-    text-align: center;
-    align-content: center;
-    font-size: 25px;
-    color: white;
-    background: linear-gradient(to top, transparent 0%, rgb(247, 72, 72));
-    width: 900px;
-    height: 100px;
-}
+
 .title{
     display: flex;
     justify-content: center;
@@ -121,6 +117,14 @@ p{
 .sub-title{
     display: flex;
     justify-content: center;
+    text-align: center;
+    margin-left: 25%;
+    font-family: myText; 
+    font-size: 25px;
+    color: white;
+    background: linear-gradient(to top, transparent 0%, rgb(247, 72, 72));
+    width: 900px;
+    height: 100px;
 }
 #first-element{
     background-image: url("C:/Users/Luizz/Desktop/Programação/UaiLab/img/Pixu.jpg");
@@ -138,4 +142,65 @@ p{
 #fourth-element{
     background-image: url("C:/Users/Luizz/Desktop/Programação/UaiLab/img/DYEFF.jpg");
     
+}
+
+.space{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    font-family: pixo;
+    font-size: 50px;
+    color: aliceblue;
+}
+
+.booking{
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    height: auto;
+}
+
+.bios{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    justify-items: center;
+
+}
+.artists{
+    width: 80%;
+    height: 500px;
+    justify-content: center;
+}
+
+.artists img{
+    justify-content: center;
+    width:400px;
+    height: 500px;
+}
+
+.bio{
+    width: 400px;
+    height: 100px;
+    top: 125px;
+    position: absolute;
+    color: white;
+    opacity: 0;
+    font-size: 20px;
+    transition: 1s;
+    background: linear-gradient(to top, 0%, rgb(139, 139, 139));
+}
+
+.artists:hover{
+    opacity: 0.9;
+}
+
+.artists:hover .bio{
+    opacity: 1;
 }
