@@ -38,6 +38,23 @@ body {
     padding-left: 10px;
 }
 
+.news{
+    width: 100%;
+    height: 150px;
+}
+.lancamentos{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    font-family: pixo;
+    font-size: 50px;
+    color: aliceblue;
+}
 #block-1{
     width: 100%;
     height: 500px;
@@ -203,4 +220,35 @@ h1{
 
 .artists:hover .bio{
     opacity: 1;
+}
+
+.aboutUs{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+    color: white;
+    display: flex;
+}
+
+.usImg{
+    justify-items: center;
+}
+.usTitle{
+    padding-left: 22.5%;
+    font-family: pixo;
+    font-size: 50px;
+    color: aliceblue;
+    justify-content: center;
+}
+
+.content{
+    width: 80%;
+    height: 150px;
+    padding-left: 100px;
+    margin-bottom: 100px;
+    color:aliceblue ;
+    font-family: arial;
+    font-size: 25px;
 }
