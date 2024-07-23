@@ -1,9 +1,9 @@
 html{
-    width: 1912px;
+    width: 100%;
     height: 100%;
 }
 body {
-    width: 1912px;
+    width: 100%;
     height: 100%;
     margin: 0;
     background-image:url("");
@@ -27,6 +27,7 @@ body {
     padding-left: 50px;
     text-decoration:none;
     font-size: 40px;
+    justify-content: center;
 }
 
 .social-medias{
@@ -158,7 +159,7 @@ h1{
 }
 #fourth-element{
     background-image: url("C:/Users/Luizz/Desktop/Programação/UaiLab/img/DYEFF.jpg");
-    
+    background: cover;
 }
 
 .space{
@@ -198,12 +199,12 @@ h1{
 
 .artists img{
     justify-content: center;
-    width:400px;
+    width: 100%;
     height: 500px;
 }
 
 .bio{
-    width: 400px;
+    width: 25%;
     height: 100px;
     top: 125px;
     position: absolute;
