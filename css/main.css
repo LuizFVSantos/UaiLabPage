@@ -253,3 +253,8 @@ h1{
     font-family: arial;
     font-size: 25px;
 }
+
+.menu_1 footer{
+    list-style: none;
+    display: block;
+}
