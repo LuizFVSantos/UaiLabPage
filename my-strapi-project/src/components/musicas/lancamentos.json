@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_musicas_lancamentos",
+  "info": {
+    "displayName": "lancamentos",
+    "icon": "headphone"
+  },
+  "options": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Link": {
+      "type": "string",
+      "required": true
+    },
+    "Capa": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "Complemento": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

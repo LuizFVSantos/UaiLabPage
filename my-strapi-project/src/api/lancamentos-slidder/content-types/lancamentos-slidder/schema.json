@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lancamentos_slidders",
+  "info": {
+    "singularName": "lancamentos-slidder",
+    "pluralName": "lancamentos-slidders",
+    "displayName": "Lancamentos_slidder"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Primeiro": {
+      "type": "component",
+      "component": "musicas.lancamentos",
+      "repeatable": true
+    },
+    "Segundo": {
+      "type": "component",
+      "component": "musicas.lancamentos",
+      "repeatable": true
+    },
+    "Terceiro": {
+      "type": "component",
+      "component": "musicas.lancamentos",
+      "repeatable": true
+    },
+    "Quarto": {
+      "type": "component",
+      "component": "musicas.lancamentos",
+      "repeatable": true
+    }
+  }
+}
