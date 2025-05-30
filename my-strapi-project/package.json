@@ -27,13 +27,18 @@
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
   "engines": {
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "c642c08c-8693-4c21-ae68-3358f50b5f1f",
-    "installId": "1247abae837a3a5791030cc2c1336cdc9cac5648b91cfe6a4689e5e53e51a2dc"
+    "uuid": "78cbc76f-732d-4ce8-aa31-198497c3482f",
+    "installId": "e0f63c0322c467dfb85aa84a08c34fa0b7b84c5135c5a67698d3c6deeaac84cf"
   }
 }
