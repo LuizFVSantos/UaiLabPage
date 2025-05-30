@@ -1,3 +1,6 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
 const controls = document.querySelectorAll(".control");
 let currentItem = 0;
 const elements = document.querySelectorAll(".elements");
