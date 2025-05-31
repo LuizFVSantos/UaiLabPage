@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-
 const controls = document.querySelectorAll(".control");
 let currentItem = 0;
 const elements = document.querySelectorAll(".elements");
@@ -21,10 +18,25 @@ controls.forEach(control => {
             currentItem = maxElements - 1;
         }
         elements[currentItem].scrollIntoView({
-            behavior: "smooth", 
-            block: "nearest", 
-            inline: "start" 
+            behavior: "smooth",
+            block: "nearest",
+            inline: "start"
         });
     });
 });
 
+const URLcall = "http://localhost:1337/api/roletas"
+
+async function chamarApi() {
+    let token = ""
+    const resp1 = await fetch(URLcall, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json"
+        }
+    })
+    const obj = await resp1.json()
+    console.log(obj)
+}
+chamarApi();

@@ -1,35 +1,29 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "lancamentos_slidders",
   "info": {
     "singularName": "lancamentos-slidder",
     "pluralName": "lancamentos-slidders",
-    "displayName": "Lancamentos_slidder"
+    "displayName": "Lancamentos"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "Primeiro": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "musicas.lancamentos",
-      "repeatable": true
-    },
-    "Segundo": {
-      "type": "component",
-      "component": "musicas.lancamentos",
-      "repeatable": true
-    },
-    "Terceiro": {
-      "type": "component",
-      "component": "musicas.lancamentos",
-      "repeatable": true
-    },
-    "Quarto": {
-      "type": "component",
-      "component": "musicas.lancamentos",
-      "repeatable": true
+      "repeatable": false
     }
   }
 }

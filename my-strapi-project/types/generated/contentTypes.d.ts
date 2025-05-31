@@ -374,34 +374,98 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 }
 
 export interface ApiLancamentosSlidderLancamentosSlidder
-  extends Struct.CollectionTypeSchema {
+  extends Struct.SingleTypeSchema {
   collectionName: 'lancamentos_slidders';
   info: {
-    displayName: 'Lancamentos_slidder';
+    displayName: 'Lancamentos';
     pluralName: 'lancamentos-slidders';
     singularName: 'lancamentos-slidder';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::lancamentos-slidder.lancamentos-slidder'
-    > &
-      Schema.Attribute.Private;
-    Primeiro: Schema.Attribute.Component<'musicas.lancamentos', true>;
+    >;
+    Primeiro: Schema.Attribute.Component<'musicas.lancamentos', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
-    Quarto: Schema.Attribute.Component<'musicas.lancamentos', true>;
-    Segundo: Schema.Attribute.Component<'musicas.lancamentos', true>;
-    Terceiro: Schema.Attribute.Component<'musicas.lancamentos', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiRoletaRoleta extends Struct.CollectionTypeSchema {
+  collectionName: 'roletas';
+  info: {
+    displayName: 'roleta';
+    pluralName: 'roletas';
+    singularName: 'roleta';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    capa: Schema.Attribute.Media<'images' | 'files' | 'videos', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    descricao: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::roleta.roleta'>;
+    publishedAt: Schema.Attribute.DateTime;
+    Titulo: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    url: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 
@@ -915,6 +979,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::lancamentos-slidder.lancamentos-slidder': ApiLancamentosSlidderLancamentosSlidder;
+      'api::roleta.roleta': ApiRoletaRoleta;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
