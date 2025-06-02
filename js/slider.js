@@ -28,7 +28,7 @@ controls.forEach(control => {
 const URLcall = "http://localhost:1337/api/roletas"
 
 async function chamarApi() {
-    let token = ""
+    const token = process.env.TokenApi
     const resp1 = await fetch(URLcall, {
         method: "GET",
         headers: {
